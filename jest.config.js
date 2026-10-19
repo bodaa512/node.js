@@ -1,0 +1,28 @@
+/** @type {import('ts-jest').JestConfigWithTsJest} */
+module.exports = {
+  preset: 'ts-jest',
+  testEnvironment: 'node',
+  moduleDirectories: ['node_modules', 'src'],
+  moduleNameMapper: {
+    '^@config/(.*)$': '<rootDir>/src/config/$1',
+    '^@models/(.*)$': '<rootDir>/src/models/$1',
+    '^@controllers/(.*)$': '<rootDir>/src/controllers/$1',
+    '^@services/(.*)$': '<rootDir>/src/services/$1',
+    '^@routes/(.*)$': '<rootDir>/src/routes/$1',
+    '^@middleware/(.*)$': '<rootDir>/src/middleware/$1',
+    '^@validators/(.*)$': '<rootDir>/src/validators/$1',
+    '^@utils/(.*)$': '<rootDir>/src/utils/$1',
+    '^@types/(.*)$': '<rootDir>/src/types/$1',
+    '^@constants/(.*)$': '<rootDir>/src/constants/$1',
+    '^@errors/(.*)$': '<rootDir>/src/errors/$1',
+    '^@jobs/(.*)$': '<rootDir>/src/jobs/$1',
+    '^@sockets/(.*)$': '<rootDir>/src/sockets/$1',
+    '^@ai/(.*)$': '<rootDir>/src/ai/$1',
+  },
+  testMatch: ['**/tests/**/*.test.ts', '**/tests/**/*.spec.ts'],
+  verbose: true,
+  forceExit: true,
+  clearMocks: true,
+  resetMocks: true,
+  restoreMocks: true,
+};
